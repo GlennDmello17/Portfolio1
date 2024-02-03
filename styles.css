@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    scroll-behavior: smooth; 
+    /* box-sizing: border-box; */
+}
+
+@media only screen and (max-width: 600px) {
+    /* Styles for small screens */
+    body {
+        font-size: 14px;
+      }
+
+    /* new */
+    .container{
+        flex-direction: column;
+    }
+
+    .right{
+      position: relative;
+      top: -50px;
+    }
+   
+  }
+  
+.container {
+    display: flex; /* Use flexbox layout */
+    height: 100vh; /* Set container height to 100% of the viewport height */
+   cursor: default;
+   
+   
+}
+.left{
+    flex: 1; /* Make the div take up half of the container's width */
+    /* border: 1px solid black; Add border for visualization */
+    margin: 5% ;
+    /* margin-left: 10%;
+    margin-top: 50px; */
+    text-align: justify;
+    animation: slideInLeft 1s ease-out;
+
+   
+    
+}
+.right{
+    flex: 1; /* Make the div take up half of the container's width */
+    /* border: 1px solid black; Add border for visualization */
+    margin: 5%;
+    overflow-y: auto;
+    animation: slideInRight 1s ease-out;
+  
+}
+
+.left,.right{
+    flex: 1;
+  height: 100%;
+  /* overflow: hidden; */
+    
+
+}
+
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Keyframes for the right content animation */
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  
+
+
+.icon{
+    width: 10%;
+    background-color: aliceblue;
+    max-width: 100%;
+    height: auto;
+}
+
+.exp{
+    padding-top: 10%;
+}
+
+.project{
+  padding-top: 10%;
+}
+
+/* new */
+.links{
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.links:hover {
+  transform: scale(1.1);
+  font-size: 1.5em; /* Increase the size on hover */
+}
+
+.links:active {
+  color: rgb(88, 32, 201); /* Change this to the desired color when the link is active */
+}
+ul{
+  list-style: none;
+}
+li{
+  display: inline;
+  margin-right: 5%;
+}
+@media screen and (max-width: 767px) {
+  .links {
+    display: none;
+  }
+}
+
+.ilink{
+  color: white;      /* Set the text color to white */
+  text-decoration: none;
+}
+
+.button{
+  display: inline-block;
+            
+            text-decoration: none;
+            background-color: black; /* Set background color to black */
+            color: white;
+            border: 2px solid white; /* Set border color and thickness */
+            border-radius: 4px;
+            cursor: pointer;
+}
